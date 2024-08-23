@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-gray-50;
+}
+
+h1 {
+    @apply mb-6 font-semibold
+}
+
+@layer components {
+    .btn {
+        @apply bg-[#12b488] text-white px-3 py-2 rounded-md text-sm text-white
+    }
+
+    .card {
+        @apply shadow-md h-full p-4 rounded-lg bg-white flex flex-col mb-4
+    }
+}
