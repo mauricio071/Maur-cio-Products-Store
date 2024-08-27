@@ -18,4 +18,20 @@ h1 {
     .card {
         @apply shadow-md h-full p-4 rounded-lg bg-white flex flex-col mb-4
     }
+
+    .carrinho-qtd {
+        @apply bg-white shadow-md rounded-lg p-4;
+    }
+
+    .produtos {
+        @apply flex flex-col gap-4;
+    }
+
+    .produto {
+        @apply bg-white shadow-md rounded-lg p-4;
+    }
+
+    .pagamento {
+        @apply bg-white shadow-md rounded-lg p-4 w-full lg:w-[30%] h-full space-y-4;
+    }
 }

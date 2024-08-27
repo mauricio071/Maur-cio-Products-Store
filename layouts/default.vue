@@ -20,6 +20,10 @@
                     <li>
                         <NuxtLink to="/produtos" class="text-xl btn">Produtos</NuxtLink>
                     </li>
+                    <li class="relative">
+                        <div v-if="qtdProdutos > 0" class="contador-produto">{{ qtdProdutos }}</div>
+                        <nuxt-link to="/carrinho"><i class="material-icons">shopping_cart</i></nuxt-link>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -32,7 +36,26 @@
 </template>
 
 <script setup>
+import { produtosStore } from '../store/produtosStore'
+import { storeToRefs, mapActions } from 'pinia';
+
 const visivel = ref(false)
+
+const store = produtosStore()
+
+const { carrinho, qtdProdutos } = storeToRefs(store)
+
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.contador-produto {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+    background-color: #12b488;
+    color: white;
+    border-radius: 50%;
+    padding: 1px 6px;
+    font-size: 10px
+}
+</style>
