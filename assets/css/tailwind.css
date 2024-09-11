@@ -11,27 +11,27 @@ h1 {
 }
 
 @layer components {
-    .btn {
-        @apply bg-[#12b488] text-white px-3 py-2 rounded-md text-sm text-white
+    .cart-amount {
+        @apply bg-white shadow-md rounded-lg p-4;
+    }
+
+    .overview {
+        @apply bg-white shadow-md rounded-lg p-4 w-full lg:w-[30%] h-full space-y-4;
     }
 
     .card {
-        @apply shadow-md h-full p-4 rounded-lg bg-white flex flex-col mb-4
+        @apply shadow-lg h-full p-4 rounded-lg bg-white flex flex-col mb-4 justify-between;
     }
 
-    .carrinho-qtd {
-        @apply bg-white shadow-md rounded-lg p-4;
+    .rating {
+        @apply flex justify-end items-center gap-2;
     }
 
-    .produtos {
-        @apply flex flex-col gap-4;
+    .btn {
+        @apply bg-[#12b488] border border-white duration-300 text-white px-3 py-2 rounded-md text-sm;
     }
 
-    .produto {
-        @apply bg-white shadow-md rounded-lg p-4;
-    }
-
-    .pagamento {
-        @apply bg-white shadow-md rounded-lg p-4 w-full lg:w-[30%] h-full space-y-4;
+    .btn:hover {
+        @apply bg-white text-[#12b488] border border-[#12b488];
     }
 }

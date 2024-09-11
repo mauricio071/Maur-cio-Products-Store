@@ -5,9 +5,9 @@ export default defineNuxtConfig({
     modules: ["@nuxtjs/tailwindcss", '@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt'],
     app: {
         head: {
-            title: "Maurício Store",
+            title: "Products Store",
             meta: [
-                { name: 'description', content: "Só produto de qualidade!!" }
+                { name: 'description', content: "Only quality products!!" }
             ],
             link: [
                 { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }

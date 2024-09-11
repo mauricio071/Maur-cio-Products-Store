@@ -2,27 +2,21 @@
     <div>
         <header class="shadow-md">
             <nav class="flex justify-between flex-wrap md:flex-nowrap container mx-auto p-8">
-                <NuxtLink to="/" class="font-bold text-xl">Maurício Store</NuxtLink>
-                <button @click="visivel = !visivel" class="md:hidden">
+                <NuxtLink to="/" class="font-bold text-xl flex gap-2 items-center">
+                    <LazyIconsShopping class="rotate-[-20deg]" />
+                    Products Store
+                </NuxtLink>
+                <button @click="visible = !visible" class="md:hidden">
                     <IconsMenu />
                 </button>
                 <ul class="space-y-4 md:space-y-0 my-4 md:my-0 justify-between gap-4 w-full md:w-[unset] md:flex"
-                    :class="{ 'block': visivel, 'hidden': !visivel }">
+                    :class="{ 'block': visible, 'hidden': !visible }">
                     <li>
-                        <NuxtLink to="/" class="text-xl" :class="{ 'text-[#12b488]': $route.path === '/' }">Home
-                        </NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/sobre" class="text-xl" :class="{ 'text-[#12b488]': $route.path === '/sobre' }">
-                            Sobre
-                        </NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/produtos" class="text-xl btn">Produtos</NuxtLink>
+                        <NuxtLink to="/" class="text-xl btn">Products</NuxtLink>
                     </li>
                     <li class="relative">
-                        <div v-if="qtdProdutos > 0" class="contador-produto">{{ qtdProdutos }}</div>
-                        <nuxt-link to="/carrinho"><i class="material-icons">shopping_cart</i></nuxt-link>
+                        <div v-if="productsAmount > 0" class="product-counter">{{ productsAmount }}</div>
+                        <nuxt-link to="/cart"><i class="material-icons">shopping_cart</i></nuxt-link>
                     </li>
                 </ul>
             </nav>
@@ -35,26 +29,19 @@
 </template>
 
 <script setup>
-import { produtosStore } from '../store/produtosStore'
-import { storeToRefs, mapActions } from 'pinia';
+import { productsStore } from '../store/productsStore'
+import { storeToRefs } from 'pinia';
 
-const visivel = ref(false)
+const visible = ref(false)
 
-const store = produtosStore()
+const store = productsStore()
 
-const { carrinho, qtdProdutos } = storeToRefs(store)
+const { cart, productsAmount } = storeToRefs(store)
 
 </script>
 
 <style scoped>
-.contador-produto {
-    position: absolute;
-    left: 10px;
-    bottom: 20px;
-    background-color: #12b488;
-    color: white;
-    border-radius: 50%;
-    padding: 1px 6px;
-    font-size: 10px
+.product-counter {
+    @apply absolute left-[10px] bottom-[20px] bg-[#12b488] text-white rounded-[50%] py-[1px] px-[6px] text-[10px];
 }
 </style>
