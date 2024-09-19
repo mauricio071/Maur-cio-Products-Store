@@ -26,7 +26,7 @@
 <script setup>
 const loading = ref(false)
 
-const { data: products, status } = useFetch('https://fakestoreapi.com/products')
+const { data: products, status } = await useFetch('https://fakestoreapi.com/products')
 
 const filters = ['all', 'electronics', 'jewelery', "men's clothing", "women's clothing"]
 
