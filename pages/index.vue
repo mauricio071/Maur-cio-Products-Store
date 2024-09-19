@@ -1,7 +1,14 @@
 <template>
     <div>
-        <h1 class="text-center text-3xl">Products Store</h1>
+        <carousel :items-to-show="1" :breakpoints="breakpoints" wrapAround :autoplay="5000">
+            <slide v-for="i in 3" :key="i">
+                <img :src="`/img/banner-${i}.png`" alt="banner" class="carousel__item">
+            </slide>
 
+            <template #addons>
+                <Navigation />
+            </template>
+        </carousel>
         <div class="filters">
             <div v-for="filter in filters" :key="filter">
                 <button @click="categoryFilter(filter)" :class="{ 'active': filter === currentFilter }"
@@ -43,8 +50,25 @@ const categoryFilter = async (filter) => {
 </script>
 
 <style scoped>
+:deep(.carousel) {
+    @apply mx-[-2rem] lg:mx-0;
+}
+
+.carousel__item {
+    @apply min-h-[200px] max-h-[550px] w-full rounded-lg flex justify-center items-center;
+}
+
+.carousel__slide {
+    @apply p-[10px];
+}
+
+:deep(.carousel) .carousel__prev,
+:deep(.carousel) .carousel__next {
+    @apply text-white bg-[#12b488] rounded-lg w-8 h-8 lg:w-10 lg:h-10;
+}
+
 .filters {
-    @apply flex flex-wrap justify-center gap-4 mb-12 lg:justify-end;
+    @apply flex flex-wrap justify-center gap-4 my-12 lg:justify-end;
 }
 
 .filters button {
