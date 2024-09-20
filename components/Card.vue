@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <img :src="product.image" alt="Product image" class="max-h-[12rem] max-w-[70%] mx-auto flex-grow">
+        <img :src="product.image" alt="Product image" class="max-h-[11rem] max-w-[70%] mx-auto flex-grow">
         <div @click="addInCart(product)" class="add-cart">
             <IconsAddProdutct />
         </div>
