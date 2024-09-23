@@ -1,75 +1,76 @@
-# Nuxt 3 Minimal Starter
+<div align="center"> <h1>Products Store</h1> </div>
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+<p align="center">Aplicação de vendas com carrinho persistente, desenvolvida com Nuxt.js!</p>
 
-## Setup
+## 📝 Sobre o projeto
 
-Make sure to install the dependencies:
+Esta aplicação de vendas foi construída utilizando o framework Nuxt.js, com integração a uma API fictícia para listar e exibir os produtos disponíveis. O Pinia foi implementado para gerenciar o estado do carrinho de compras, garantindo que os itens permaneçam salvos no navegador, mesmo após atualizar ou fechar a página, trazendo uma experiência semelhante ao AliExpress.
 
-```bash
-# npm
-npm install
+## 🛠 Tecnologias utilizadas
 
-# pnpm
-pnpm install
+-   **Vue.js** - Framework JavaScript progressivo
+-   **Nuxt.js** - Framework baseado em Vue.js para SSR
+-   **JavaScript** - Linguagem de programação
+-   **HTML** - Estrutura do conteúdo
+-   **CSS** - Estilização da interface
+-   **Tailwind CSS** - Framework de estilos
 
-# yarn
-yarn install
+## 📸 Screenshots
 
-# bun
-bun install
-```
+<p align="center">
+  <img src="./src/assets/readme-img/img-1.png" alt="Preview-Screens-1" width="500" >
+</p>
 
-## Development Server
+<p align="center">
+  <img src="./src/assets/readme-img/img-2.png" alt="Preview-Screens-2" width="500" >
+</p>
 
-Start the development server on `http://localhost:3000`:
+<p align="center">
+  <img src="./src/assets/readme-img/img-3.png" alt="Preview-Screens-3" width="500" >
+</p>
 
-```bash
-# npm
-npm run dev
+<p align="center">
+  <img src="./src/assets/readme-img/img-4.png" alt="Preview-Screens-4" width="500" >
+</p>
 
-# pnpm
-pnpm run dev
+## 🌐 Acesse o projeto online
+Você pode acessar a versão online do projeto [aqui](https://mauricio-products-store.netlify.app).
 
-# yarn
-yarn dev
+## 🖥️ Como configurar o projeto
 
-# bun
-bun run dev
-```
+Siga os passos abaixo para instalar e executar o projeto em seu ambiente local:
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
+### 1. Clone o repositório:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+$ git clone https://github.com/mauricio071/Products-Store
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+### 2. Acesse o diretório do projeto:
+
+```bash
+$ cd Products-Store
+```
+
+### 3. Instale as dependências necessárias:
+
+```bash
+$ npm install
+```
+ou
+
+```bash
+$ yarn install
+```
+
+### 4. Inicialize o projeto:
+
+```bash 
+$ npm run dev
+```
+ou, se estiver usando yarn:
+
+```bash 
+$ yarn dev
+```
+Agora você pode acessar o projeto no navegador em http://localhost:3000 (ou na porta indicada pelo terminal).
