@@ -18,19 +18,19 @@ Esta aplicação de vendas foi construída utilizando o framework Nuxt.js, com i
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="./src/assets/readme-img/img-1.png" alt="Preview-Screens-1" width="500" >
+  <img src="./assets/readme-img/img-1.png" alt="Preview-Screens-1" width="500" >
 </p>
 
 <p align="center">
-  <img src="./src/assets/readme-img/img-2.png" alt="Preview-Screens-2" width="500" >
+  <img src="./assets/readme-img/img-2.png" alt="Preview-Screens-2" width="500" >
 </p>
 
 <p align="center">
-  <img src="./src/assets/readme-img/img-3.png" alt="Preview-Screens-3" width="500" >
+  <img src="./assets/readme-img/img-3.png" alt="Preview-Screens-3" width="500" >
 </p>
 
 <p align="center">
-  <img src="./src/assets/readme-img/img-4.png" alt="Preview-Screens-4" width="500" >
+  <img src="./assets/readme-img/img-4.png" alt="Preview-Screens-4" width="500" >
 </p>
 
 ## 🌐 Acesse o projeto online
