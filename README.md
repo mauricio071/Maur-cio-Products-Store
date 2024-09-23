@@ -9,7 +9,7 @@ Esta aplicação de vendas foi construída utilizando o framework Nuxt.js, com i
 ## 🛠 Tecnologias utilizadas
 
 -   **Vue.js** - Framework JavaScript progressivo
--   **Nuxt.js** - Framework baseado em Vue.js para SSR]
+-   **Nuxt.js** - Framework baseado em Vue.js para SSR
 -   **Pinia** - Biblioteca de gerenciamento de estado
 -   **JavaScript** - Linguagem de programação
 -   **HTML** - Estrutura do conteúdo
