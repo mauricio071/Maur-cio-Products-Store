@@ -14,11 +14,4 @@ export default defineNuxtConfig({
             ]
         },
     },
-
-    runtimeConfig: {
-        currencyKey: process.env.NUXT_CURRENCY_API_KEY,
-        public: {
-            baseURL: process.env.NUXT_PUBLIC_BASE_URL || "http://localhost:8000",
-        }
-    }
 })
