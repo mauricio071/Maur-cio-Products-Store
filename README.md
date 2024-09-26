@@ -1,7 +1,7 @@
 <div align="center"> <h1>Products Store</h1> </div>
 
 <p align="center">Aplicação de vendas com carrinho persistente, desenvolvida com Nuxt.js!</p>
-
+ 
 <p align="center">
   <img alt="Github Language Count" src="https://img.shields.io/github/languages/count/mauricio071/Products-Store?color=00bfa6">
   <img width="1" />
