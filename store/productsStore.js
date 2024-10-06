@@ -22,15 +22,17 @@ export const productsStore = defineStore("products", {
                 exist.total += amount ? amount * product.price : exist.price
             }
         },
+        removeProduct(id) {
+            this.cart = this.cart.filter((item) => item.id !== id)
+        },
         removeUnit(id) {
             const product = this.cart.find((item) => item.id === id)
             if (product.amount > 1) {
                 product.amount -= 1
-                exist.total -= exist.price
+                product.total -= product.price
+            } else {
+                this.removeProduct(id)
             }
-        },
-        removeProduct(id) {
-            this.cart = this.cart.filter((item) => item.id !== id)
         },
         checkout() {
             this.cart = []
@@ -43,7 +45,7 @@ export const productsStore = defineStore("products", {
         },
         totalValue() {
             return this.cart.reduce((total, item) => total += item.total, 0).toFixed(2)
-        }
+        },
     },
     persist: true,
 })
