@@ -4,12 +4,18 @@
             <img :src="product.image" :alt="product.title">
             <div class="product-details">
                 <div class="flex items-center justify-between w-full">
-                    <h3>{{ product.title }}</h3>
+                    <h3 class="text-[20px] font-bold">{{ product.title }}</h3>
                     <i @click="remove(product.id)"
                         class="material-icons mb-2 cursor-pointer duration-300 hover:text-red-500">delete</i>
                 </div>
                 <p>{{ product.description }}</p>
-                <p class="font-bold">Amount: {{ product.amount }}</p>
+                <div class="amounts">
+                    <h3 class="font-bold">Amount:</h3>
+                    <IconsMinus @click="removeUnitProduct(product.id)"
+                        class="w-[1.5rem] text-gray-500 cursor-pointer" />
+                    <span class="font-semibold">{{ product.amount }}</span>
+                    <IconsPlus @click="addUnitProduct(product)" class="w-[1.5rem] text-gray-500 cursor-pointer" />
+                </div>
                 <p class="text-xl font-semibold">Total price: ${{ product.total.toFixed(2) }}</p>
             </div>
         </div>
@@ -32,11 +38,19 @@ const remove = (id) => {
         $toast.error("There was an error processing your request")
     }
 }
+
+const removeUnitProduct = (id) => {
+    store.removeUnit(id);
+}
+
+const addUnitProduct = (product) => {
+    store.addProduct(product)
+}
 </script>
 
 <style scoped>
 .product {
-    @apply bg-white shadow-md rounded-lg p-4 min-h-[15rem] md:flex md:gap-4;
+    @apply bg-white shadow-md rounded-lg px-4 py-8 min-h-[15rem] md:flex md:gap-4;
 }
 
 .product img {
@@ -44,14 +58,10 @@ const remove = (id) => {
 }
 
 .product-details {
-    @apply max-w-[45rem];
+    @apply max-w-[45rem] space-y-6;
 }
 
-.product-details h3 {
-    @apply text-[20px] font-bold mb-4;
-}
-
-.product-details p {
-    @apply mb-4;
+.amounts {
+    @apply flex items-center gap-2;
 }
 </style>
