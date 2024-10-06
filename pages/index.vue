@@ -55,7 +55,7 @@ const categoryFilter = async (filter) => {
 }
 
 .carousel__item {
-    @apply min-h-[200px] max-h-[500px] w-full rounded-lg flex justify-center items-center;
+    @apply min-h-[200px] max-h-[480px] w-full rounded-lg flex justify-center items-center;
 }
 
 .carousel__slide {
