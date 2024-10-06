@@ -128,9 +128,12 @@ const addInCart = () => {
     @apply max-h-[9rem];
 }
 
-:deep(.carousel) .carousel__viewport {
-    @apply p-6;
+.carousel {
+    @screen 2xl {
+        @apply max-w-[73rem] p-6;
+    }
 }
+
 
 :deep(.carousel) .carousel__track {
     @apply gap-12;
