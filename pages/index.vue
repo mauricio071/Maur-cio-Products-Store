@@ -1,6 +1,6 @@
 <template>
     <div>
-        <carousel :items-to-show="1" wrapAround :autoplay="5000">
+        <carousel :items-to-show="1" wrapAround :autoplay="5000" pauseAutoplayOnHover>
             <slide v-for="i in 3" :key="i">
                 <img :src="`/img/banner-${i}.png`" alt="banner" class="carousel__item">
             </slide>
